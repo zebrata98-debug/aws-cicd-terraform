@@ -1,33 +1,6 @@
-# AWS CI/CD Pipeline with Terraform
+AWS CI/CD Pipeline with Terraform
 
-This is a personal project I built to practice Infrastructure as Code and learn 
-how AWS developer tools fit together. The goal was to set up a pipeline that 
-automatically builds and deploys a Dockerized app whenever I push code to GitHub.
-
-## What it does
-
-When I push code to the main branch, the pipeline automatically:
-1. Picks up the change from GitHub
-2. Builds a Docker image using CodeBuild
-3. Pushes the image to a private ECR registry
-4. Deploys it to an EC2 instance
-
-Instead of clicking through the AWS Console to set everything up, I used Terraform 
-so the whole infrastructure is defined in code and can be recreated or torn down 
-with a single command.
-
-## Tech used
-
-- Terraform for provisioning all the AWS infrastructure
-- AWS CodePipeline to orchestrate the pipeline
-- AWS CodeBuild to build the Docker image
-- Amazon ECR to store the Docker image
-- Amazon EC2 (t2.micro) to run the app
-- S3 for storing pipeline artifacts
-- IAM roles to give each service the right permissions
-- GitHub + CodeStar Connections for source integration
-
-## Project structure
+Project structure
 ```
 aws-cicd-terraform/
 ├── terraform/
